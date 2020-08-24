@@ -379,10 +379,10 @@ a:focus {
 				<div class="header__text">
 					<h1 class="heading-primary">
 						<!-- Replace the following name with your name -->
-						<span>Isha Gupta</span>
+						<span id="head" onmouseover="typeWriter()" ></span>
 					</h1>
 					<!-- Put a small paragraph about yourself -->
-					<p>A Front-end Web Developer based in Greater Noida, Uttar Pradesh</p>
+					<p id="para"  onmouseover="typeWriter1()"></p>
 					<a href="#contact" class="btn btn--pink">Get in touch</a>
 				</div>
 			</div>
@@ -507,4 +507,42 @@ a:focus {
 			<p>All rights reserved by Isha Gupta</p>
 		</footer>
 	</body>
+<script>
+	
+let j=0;
+let name ="Isha Gupta";
+
+function typeWriter1(){
+
+  if (j < name.length) {
+    let nameAnim = document.getElementById('head');
+    console.log(nameAnim)
+    nameAnim.innerHTML += name.charAt(j);
+    j++;
+
+    setTimeout(typeWriter1, 275);
+  }
+
+}
+
+
+let i = 0;
+let txt = 'A Front-end Web Developer based in Greater Noida, Uttar Pradesh'; 
+
+
+function typeWriter() {
+
+  if (i < txt.length) {
+    let animation = document.getElementById('para');
+    console.log(animation)
+    animtn.innerHTML += txt.charAt(i);
+    i++;
+
+    setTimeout(typeWriter, 100);
+  }
+ 
+  
+}
+
+</script>
 </html>
